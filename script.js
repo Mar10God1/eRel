@@ -4,7 +4,7 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'Campaign Effectiveness Ratings by Service'
+        text: 'Campaign Responses by Service'
     },
     subtitle: {
         text: ''
@@ -14,7 +14,7 @@ Highcharts.chart('container', {
     },
     yAxis: {
         title: {
-            text: 'Effectiveness Rating'
+            text: 'Response Volume'
         }
 
     },
@@ -25,228 +25,935 @@ Highcharts.chart('container', {
         series: {
             borderWidth: 0,
             dataLabels: {
-                enabled: true,
-                format: '{point.y:.1f}%'
+                enabled: false,
+                format: '{point.name}'
             }
         }
     },
 
     tooltip: {
         headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:2f}</b><br/>'
     },
 
     series: [{
         name: 'Services',
         colorByPoint: true,
         data: [{
-            name: 'IPL Therapy',
-            y: 56.33,
-            drilldown: 'IPL Therapy'
+            name: 'Botox',
+            y: 7177,
+            drilldown: 'Botox'
         }, {
-            name: 'Coolsculpting',
-            y: 24.03,
-            drilldown: 'Coolsculpting'
+            name: 'Dermal Fillers',
+            y: 6663,
+            drilldown: 'Dermal Fillers'
         }, {
-            name: 'Firefox',
-            y: 10.38,
-            drilldown: 'Firefox'
+            name: 'CoolSculpting',
+            y: 4454,
+            drilldown: 'CoolSculpting'
         }, {
-            name: 'Safari',
-            y: 4.77,
-            drilldown: 'Safari'
+            name: 'Laser Hair Removal',
+            y: 2817,
+            drilldown: 'Laser Hair Removal'
         }, {
-            name: 'Opera',
-            y: 0.91,
-            drilldown: 'Opera'
+            name: 'Ultherapy',
+            y: 2317,
+            drilldown: 'Ultherapy'
         }, {
-            name: 'Proprietary or Undetectable',
-            y: 0.2,
-            drilldown: null
+            name: 'Kybella',
+            y: 2248,
+            drilldown: 'Kybella'
+          }, {
+              name: 'IPL Therapy',
+              y: 1614,
+              drilldown: 'IPL Therapy'
+          }, {
+            name: 'Micro-Needling',
+            y: 1550,
+            drilldown: 'Micro-Needling'
+        }, {
+            name: 'Chemical Peel',
+            y: 1358,
+            drilldown: 'Chemical Peel'
+        }, {
+            name: 'SculpSure',
+            y: 1325,
+            drilldown: 'SculpSure'
+        }, {
+            name: 'Medical Weight Loss',
+            y: 1305,
+            drilldown: 'Medical Weight Loss'
+        }, {
+            name: 'Vanquish Body',
+            y: 963,
+            drilldown: 'Vanquish Body'
+        }, {
+            name: 'Juvederm',
+            y: 961,
+            drilldown: 'Juvederm'
+        }, {
+            name: 'Bioidentical Hormone Therapy',
+            y: 880,
+            drilldown: 'Bioidentical Hormone Therapy'
+        }, {
+            name: 'Liposuction',
+            y: 855,
+            drilldown: 'Liposuction'
+        }, {
+            name: 'Microdermabrasion',
+            y: 831,
+            drilldown: 'Microdermabrasion'
         }]
     }],
     drilldown: {
         series: [{
-            name: 'IPL Therapy',
-            id: 'IPL Therapy',
+          name: 'Botox',
+          id: 'Botox',
+          data: [
+              [
+                  'January',
+                  1018
+              ],
+              [
+                  'February',
+                  836
+              ],
+              [
+                  'March',
+                  1188
+              ],
+              [
+                  'April',
+                  673
+              ],
+              [
+                  'May',
+                  669
+              ],
+              [
+                  'June',
+                  211
+              ],
+              [
+                  'July',
+                  280
+              ],
+              [
+                  'August',
+                  251
+              ],
+              [
+                  'September',
+                  372
+              ],
+              [
+                  'October',
+                  639
+              ],
+              [
+                  'November',
+                  631
+              ],
+              [
+                  'December',
+                  409
+              ]
+          ]
+       }, {
+            name: 'Dermal Fillers',
+            id: 'Dermal Fillers',
             data: [
                 [
-                    'v11.0',
-                    24.13
+                    'January',
+                    398
                 ],
                 [
-                    'v8.0',
-                    17.2
+                    'February',
+                    793
                 ],
                 [
-                    'v9.0',
-                    8.11
+                    'March',
+                    897
                 ],
                 [
-                    'v10.0',
-                    5.33
+                    'April',
+                    803
                 ],
                 [
-                    'v6.0',
-                    1.06
+                    'May',
+                    755
                 ],
                 [
-                    'v7.0',
-                    0.5
+                    'June',
+                    249
+                ],
+                [
+                    'July',
+                    209
+                ],
+                [
+                    'August',
+                    340
+                ],
+                [
+                    'September',
+                    229
+                ],
+                [
+                    'October',
+                    339
+                ],
+                [
+                    'November',
+                    850
+                ],
+                [
+                    'December',
+                    801
                 ]
             ]
         }, {
-            name: 'Coolsculpting',
-            id: 'Coolsculpting',
-            data: [
-                [
-                    'v40.0',
-                    5
-                ],
-                [
-                    'v41.0',
-                    4.32
-                ],
-                [
-                    'v42.0',
-                    3.68
-                ],
-                [
-                    'v39.0',
-                    2.96
-                ],
-                [
-                    'v36.0',
-                    2.53
-                ],
-                [
-                    'v43.0',
-                    1.45
-                ],
-                [
-                    'v31.0',
-                    1.24
-                ],
-                [
-                    'v35.0',
-                    0.85
-                ],
-                [
-                    'v38.0',
-                    0.6
-                ],
-                [
-                    'v32.0',
-                    0.55
-                ],
-                [
-                    'v37.0',
-                    0.38
-                ],
-                [
-                    'v33.0',
-                    0.19
-                ],
-                [
-                    'v34.0',
-                    0.14
-                ],
-                [
-                    'v30.0',
-                    0.14
-                ]
+          name: 'CoolSculpting',
+          id: 'CoolSculpting',
+          data: [
+              [
+                  'January',
+                  584
+              ],
+              [
+                  'February',
+                  273
+              ],
+              [
+                  'March',
+                  532
+              ],
+              [
+                  'April',
+                  755
+              ],
+              [
+                  'May',
+                  455
+              ],
+              [
+                  'June',
+                  258
+              ],
+              [
+                  'July',
+                  345
+              ],
+              [
+                  'August',
+                  80
+              ],
+              [
+                  'September',
+                  291
+              ],
+              [
+                  'October',
+                  197
+              ],
+              [
+                  'November',
+                  323
+              ],
+              [
+                  'December',
+                  361
+              ]
+          ]
+      }, {
+        name: 'Laser Hair Removal',
+        id: 'Laser Hair Removal',
+        data: [
+            [
+                'January',
+                153
+            ],
+            [
+                'February',
+                187
+            ],
+            [
+                'March',
+                272
+            ],
+            [
+                'April',
+                100
+            ],
+            [
+                'May',
+                287
+            ],
+            [
+                'June',
+                0
+            ],
+            [
+                'July',
+                50
+            ],
+            [
+                'August',
+                44
+            ],
+            [
+                'September',
+                123
+            ],
+            [
+                'October',
+                157
+            ],
+            [
+                'November',
+                121
+            ],
+            [
+                'December',
+                120
             ]
+        ]
+    }, {
+      name: 'Ultherapy',
+      id: 'Ultherapy',
+      data: [
+          [
+              'January',
+              153
+          ],
+          [
+              'February',
+              187
+          ],
+          [
+              'March',
+              272
+          ],
+          [
+              'April',
+              100
+          ],
+          [
+              'May',
+              287
+          ],
+          [
+              'June',
+              0
+          ],
+          [
+              'July',
+              50
+          ],
+          [
+              'August',
+              44
+          ],
+          [
+              'September',
+              123
+          ],
+          [
+              'October',
+              157
+          ],
+          [
+              'November',
+              121
+          ],
+          [
+              'December',
+              120
+          ]
+      ]
+  }, {
+    name: 'Kybella',
+    id: 'Kybella',
+    data: [
+        [
+            'January',
+            153
+        ],
+        [
+            'February',
+            187
+        ],
+        [
+            'March',
+            272
+        ],
+        [
+            'April',
+            100
+        ],
+        [
+            'May',
+            287
+        ],
+        [
+            'June',
+            0
+        ],
+        [
+            'July',
+            50
+        ],
+        [
+            'August',
+            44
+        ],
+        [
+            'September',
+            123
+        ],
+        [
+            'October',
+            157
+        ],
+        [
+            'November',
+            121
+        ],
+        [
+            'December',
+            120
+        ]
+    ]
+}, {
+  name: 'IPL Therapy',
+  id: 'IPL Therapy',
+  data: [
+      [
+          'January',
+          153
+      ],
+      [
+          'February',
+          187
+      ],
+      [
+          'March',
+          272
+      ],
+      [
+          'April',
+          100
+      ],
+      [
+          'May',
+          287
+      ],
+      [
+          'June',
+          8
+      ],
+      [
+          'July',
+          50
+      ],
+      [
+          'August',
+          44
+      ],
+      [
+          'September',
+          123
+      ],
+      [
+          'October',
+          157
+      ],
+      [
+          'November',
+          121
+      ],
+      [
+          'December',
+          120
+      ]
+  ]
+  }, {
+    name: 'Micro-Needling',
+    id: 'Micro-Needling',
+    data: [
+        [
+            'January',
+            153
+        ],
+        [
+            'February',
+            187
+        ],
+        [
+            'March',
+            272
+        ],
+        [
+            'April',
+            100
+        ],
+        [
+            'May',
+            287
+        ],
+        [
+            'June',
+            0
+        ],
+        [
+            'July',
+            50
+        ],
+        [
+            'August',
+            44
+        ],
+        [
+            'September',
+            123
+        ],
+        [
+            'October',
+            157
+        ],
+        [
+            'November',
+            121
+        ],
+        [
+            'December',
+            120
+        ]
+    ]
+    }, {
+      name: 'Chemical Peel',
+      id: 'Chemical Peel',
+      data: [
+          [
+              'January',
+              153
+          ],
+          [
+              'February',
+              187
+          ],
+          [
+              'March',
+              272
+          ],
+          [
+              'April',
+              100
+          ],
+          [
+              'May',
+              287
+          ],
+          [
+              'June',
+              0
+          ],
+          [
+              'July',
+              50
+          ],
+          [
+              'August',
+              44
+          ],
+          [
+              'September',
+              123
+          ],
+          [
+              'October',
+              157
+          ],
+          [
+              'November',
+              121
+          ],
+          [
+              'December',
+              120
+          ]
+      ]
+      }, {
+        name: 'SculpSure',
+        id: 'SculpSure',
+        data: [
+            [
+                'January',
+                153
+            ],
+            [
+                'February',
+                187
+            ],
+            [
+                'March',
+                272
+            ],
+            [
+                'April',
+                100
+            ],
+            [
+                'May',
+                287
+            ],
+            [
+                'June',
+                0
+            ],
+            [
+                'July',
+                50
+            ],
+            [
+                'August',
+                44
+            ],
+            [
+                'September',
+                123
+            ],
+            [
+                'October',
+                157
+            ],
+            [
+                'November',
+                121
+            ],
+            [
+                'December',
+                120
+            ]
+        ]
         }, {
-            name: 'Firefox',
-            id: 'Firefox',
+          name: 'Medical Weight Loss',
+          id: 'Medical Weight Loss',
+          data: [
+              [
+                  'January',
+                  153
+              ],
+              [
+                  'February',
+                  187
+              ],
+              [
+                  'March',
+                  272
+              ],
+              [
+                  'April',
+                  100
+              ],
+              [
+                  'May',
+                  287
+              ],
+              [
+                  'June',
+                  0
+              ],
+              [
+                  'July',
+                  50
+              ],
+              [
+                  'August',
+                  44
+              ],
+              [
+                  'September',
+                  123
+              ],
+              [
+                  'October',
+                  157
+              ],
+              [
+                  'November',
+                  121
+              ],
+              [
+                  'December',
+                  120
+              ]
+          ]
+          }, {
+            name: 'Vanquish Body',
+            id: 'Vanquish Body',
             data: [
                 [
-                    'v35',
-                    2.76
+                    'January',
+                    153
                 ],
                 [
-                    'v36',
-                    2.32
+                    'February',
+                    187
                 ],
                 [
-                    'v37',
-                    2.31
+                    'March',
+                    272
                 ],
                 [
-                    'v34',
-                    1.27
+                    'April',
+                    100
                 ],
                 [
-                    'v38',
-                    1.02
+                    'May',
+                    287
                 ],
                 [
-                    'v31',
-                    0.33
+                    'June',
+                    0
                 ],
                 [
-                    'v33',
-                    0.22
+                    'July',
+                    50
                 ],
                 [
-                    'v32',
-                    0.15
+                    'August',
+                    44
+                ],
+                [
+                    'September',
+                    123
+                ],
+                [
+                    'October',
+                    157
+                ],
+                [
+                    'November',
+                    121
+                ],
+                [
+                    'December',
+                    120
                 ]
             ]
-        }, {
-            name: 'Safari',
-            id: 'Safari',
-            data: [
-                [
-                    'v8.0',
-                    2.56
-                ],
-                [
-                    'v7.1',
-                    0.77
-                ],
-                [
-                    'v5.1',
-                    0.42
-                ],
-                [
-                    'v5.0',
-                    0.3
-                ],
-                [
-                    'v6.1',
-                    0.29
-                ],
-                [
-                    'v7.0',
-                    0.26
-                ],
-                [
-                    'v6.2',
-                    0.17
+            }, {
+              name: 'Juvederm',
+              id: 'Juvederm',
+              data: [
+                  [
+                      'January',
+                      153
+                  ],
+                  [
+                      'February',
+                      187
+                  ],
+                  [
+                      'March',
+                      272
+                  ],
+                  [
+                      'April',
+                      100
+                  ],
+                  [
+                      'May',
+                      287
+                  ],
+                  [
+                      'June',
+                      0
+                  ],
+                  [
+                      'July',
+                      50
+                  ],
+                  [
+                      'August',
+                      44
+                  ],
+                  [
+                      'September',
+                      123
+                  ],
+                  [
+                      'October',
+                      157
+                  ],
+                  [
+                      'November',
+                      121
+                  ],
+                  [
+                      'December',
+                      120
+                  ]
+              ]
+              }, {
+                name: 'Bioidentical Hormone Therapy',
+                id: 'Bioidentical Hormone Therapy',
+                data: [
+                    [
+                        'January',
+                        153
+                    ],
+                    [
+                        'February',
+                        187
+                    ],
+                    [
+                        'March',
+                        272
+                    ],
+                    [
+                        'April',
+                        100
+                    ],
+                    [
+                        'May',
+                        287
+                    ],
+                    [
+                        'June',
+                        0
+                    ],
+                    [
+                        'July',
+                        50
+                    ],
+                    [
+                        'August',
+                        44
+                    ],
+                    [
+                        'September',
+                        123
+                    ],
+                    [
+                        'October',
+                        157
+                    ],
+                    [
+                        'November',
+                        121
+                    ],
+                    [
+                        'December',
+                        120
+                    ]
                 ]
-            ]
-        }, {
-            name: 'Opera',
-            id: 'Opera',
-            data: [
-                [
-                    'v12.x',
-                    0.34
-                ],
-                [
-                    'v28',
-                    0.24
-                ],
-                [
-                    'v27',
-                    0.17
-                ],
-                [
-                    'v29',
-                    0.16
-                ]
-            ]
+                }, {
+                  name: 'Liposuction',
+                  id: 'Liposuction',
+                  data: [
+                      [
+                          'January',
+                          153
+                      ],
+                      [
+                          'February',
+                          187
+                      ],
+                      [
+                          'March',
+                          272
+                      ],
+                      [
+                          'April',
+                          100
+                      ],
+                      [
+                          'May',
+                          287
+                      ],
+                      [
+                          'June',
+                          0
+                      ],
+                      [
+                          'July',
+                          50
+                      ],
+                      [
+                          'August',
+                          44
+                      ],
+                      [
+                          'September',
+                          123
+                      ],
+                      [
+                          'October',
+                          157
+                      ],
+                      [
+                          'November',
+                          121
+                      ],
+                      [
+                          'December',
+                          120
+                      ]
+                  ]
+                  }, {
+                    name: 'Microdermabrasion',
+                    id: 'Microdermabrasion',
+                    data: [
+                        [
+                            'January',
+                            153
+                        ],
+                        [
+                            'February',
+                            187
+                        ],
+                        [
+                            'March',
+                            272
+                        ],
+                        [
+                            'April',
+                            100
+                        ],
+                        [
+                            'May',
+                            287
+                        ],
+                        [
+                            'June',
+                            0
+                        ],
+                        [
+                            'July',
+                            50
+                        ],
+                        [
+                            'August',
+                            44
+                        ],
+                        [
+                            'September',
+                            13
+                        ],
+                        [
+                            'October',
+                            155
+                        ],
+                        [
+                            'November',
+                            131
+                        ],
+                        [
+                            'December',
+                            150
+                        ]
+                    ]
         }]
     }
 });
