@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+header {
+  background-color: #00ABE1;
+  height: 120px;
+}
+
+h1 {
+  text-align: center;
+}
+img {
+  margin-top: 15px;
+  margin-left: 20px;
+  height: 90px;
+}
+#container {
+  width: 75%;
+}
+
+footer {
+  background-color: #262626;
+  color: #717171;
+  height: 120px;
+  padding: 20px;
+}

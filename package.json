@@ -1,0 +1,25 @@
+{
+  "name": "erelevance",
+  "version": "1.0.0",
+  "description": "charts and graphs",
+  "main": "script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mar10God1/eRel.git"
+  },
+  "keywords": [
+    "charts"
+  ],
+  "author": "Highcharts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mar10God1/eRel/issues"
+  },
+  "homepage": "https://github.com/Mar10God1/eRel#readme",
+  "dependencies": {
+    "highcharts": "^5.0.12"
+  }
+}
